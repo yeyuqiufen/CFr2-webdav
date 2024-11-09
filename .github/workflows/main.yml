@@ -14,8 +14,8 @@ jobs:
 
       - name: Create wrangler.toml
         env:
-          USERNAME: ${{ secrets.USERNAME || '_user' }}
-          PASSWORD: ${{ secrets.PASSWORD || '_pass' }}
+          USERNAME: ${{ secrets.USERNAME || 'user' }}
+          PASSWORD: ${{ secrets.PASSWORD || 'pass' }}
           BUCKET_NAME: ${{ secrets.BUCKET_NAME || 'yeyuqiufeng' }}
         run: |
           sed -e "s/\$USERNAME/$USERNAME/g" \
